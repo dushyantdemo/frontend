@@ -1,0 +1,54 @@
+.error-text
+  font-size-adjust: 0.4
+  color: darkred
+  white-space: pre-wrap
+  overflow: visible
+
+mat-list-item mat-icon
+  font-size-adjust: 0.4
+  padding-top: 10px
+
+mat-card-content
+  width: 40vw
+
+mat-error
+  font-size-adjust: 0.5
+
+mat-form-field .mat-icon.mat-primary
+  transform: scale(2)
+
+#screen-size-hint
+  display: none
+
+mat-grid-tile-footer
+  text-align: center
+
+@media (max-width: 600px)
+  mat-form-field mat-label
+    font-size-adjust: 0.4 !important
+
+  a
+    font-size-adjust: 0.4 !important
+
+  button
+    font-size-adjust: 0.4 !important
+
+  .hide-me
+    display: none
+
+@media (max-width: 480px)
+  .error-text
+    font-size-adjust: 0.3
+
+@media (max-width: 270px)
+  mat-grid-list
+    display: none
+
+  mat-grid-tile-footer > mat-list
+    display: none
+
+  .hide-me
+    display: none
+
+  #screen-size-hint
+    display: inherit

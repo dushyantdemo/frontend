@@ -1,0 +1,42 @@
+    <mat-grid-list rowHeight="80px" cols="200" >
+      <mat-grid-tile colspan="200">
+        <mat-form-field appearance="fill">
+          <mat-label>User name or Email</mat-label>
+          <input matInput id="userName" type="text" [formControl]="userName" >
+          <mat-error *ngIf="userName.invalid">{{getUserNameErrors()}}</mat-error>
+          <mat-icon matPrefix color="primary" [hidden]="devWidth < 1088" class="hide-me border-me">person</mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="200">
+        <mat-form-field appearance="fill">
+          <mat-label>Passsword</mat-label>
+          <input matInput id="password" type="password" [formControl]="password">
+          <mat-icon matPrefix color="primary" [hidden]="devWidth < 1088" class="hide-me border-me">lock</mat-icon>
+          <mat-error *ngIf="password.invalid">{{getPasswordErrors()}}</mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="50">
+        &nbsp;
+      </mat-grid-tile>
+      <mat-grid-tile colspan="50">
+        <a mat-flat-button href="#" >Register Now</a>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="50">
+        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="50">
+        &nbsp;
+      </mat-grid-tile>
+    </mat-grid-list>
+    <mat-grid-tile-footer>
+      <mat-list>
+        <mat-list-item *ngFor="let keys of message | keyvalue">
+          <span class="error-text">
+            {{keys.value}}
+          </span>
+        </mat-list-item>
+      </mat-list>
+
+    </mat-grid-tile-footer>
+
+<mat-hint id="screen-size-hint">Screen size is too small. Please use a larger screen size</mat-hint>

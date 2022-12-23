@@ -1,0 +1,30 @@
+<header>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <div>
+                <button mat-mini-fab color="accent" aria-label="Menu" [matMenuTriggerFor]="menu">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <span>Option 1</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Option 2</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Option 3</span>
+                    </button>
+                    <button mat-menu-item>
+                        <span>Option 4</span>
+                    </button>
+                </mat-menu>
+            </div>
+            <h1>{{headerText}}</h1>
+            <span class="menu-spacer"></span>
+            <button mat-icon-button aria-label="Profile" class="add-hover" (click)="loginPage()">
+                <mat-icon svgIcon="profile" aria-hidden="false" class="add-hover"></mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</header>
