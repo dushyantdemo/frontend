@@ -1,0 +1,24 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "Monorepo for we application",
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "start-webapp": "npm run start --workspace=webapp",
+    "start-loginapp": "npm run start --workspace=loginapp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dushyantdemo/frontend.git"
+  },
+  "author": "Dushyant Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dushyantdemo/frontend/issues"
+  },
+  "homepage": "https://github.com/dushyantdemo/frontend#readme",
+  "workspaces": [
+    "./webapp",
+    "./loginapp"
+  ]
+}
